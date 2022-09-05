@@ -1,0 +1,524 @@
+.outline{
+    position: relative;
+    margin: 0px auto;
+    display: block;
+    height: 100%;
+}
+
+/* 지도크기 설정 */
+.FMIndexMapDom{
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+}
+
+/* 거리설정, 갯수설정 버튼 기본 세팅  */
+.navermap__btnSetSearchOpt,.navermap__btnSetCountOpt{
+    display: block;
+    border-radius: 20px;
+    box-shadow: 1px 1px 1px 1px rgba(200,200,200,0.8);
+    background-color: rgba(250, 250, 250, 0.9);
+    /* border : 1px solid rgb(200,200,200); */
+    border: none;
+    /* border-radius: 25%; */
+    padding: 0px;
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    /* box-shadow: 1px 1px 1px 1px rgba(200,200,200,0.8); */
+}
+
+/* 현위치 버튼 기본 세팅 */
+.navermap__btnCurLoc{
+    position: absolute;
+    bottom: 32px;
+    right: 16px;
+    display: block;
+    background-color: rgba(250, 250, 250, 0.9);
+    border : 1px solid rgb(200,200,200);
+    border-radius: 25%;
+    padding: 0px;
+    width: 50px;
+    height: 45px;
+    text-align: center;
+    box-shadow: 1px 1px 1px 1px rgba(200,200,200,0.8);
+}
+.navermap__btnCurLoc>img{
+    margin: 0px;
+    padding: 8px;
+    width: 100%;
+    height: 100%;
+}
+
+/* 지도 확대 축소 버튼 */
+.btnZoomOption{
+    width: 50px;
+    display: block;
+    background-color: rgba(250, 250, 250, 0.9);
+    border : 1px solid rgb(200,200,200);
+    border-radius: 25%;
+    padding: 0px;
+    width: 50px;
+    height: 45px;
+    text-align: center;
+    box-shadow: 1px 1px 1px 1px rgba(200,200,200,0.8);
+    font-size: 25pt;
+    font-weight: 500;
+    line-height: 0px;
+    padding-bottom: 3px;
+}
+
+.btnZoomIn{
+    position: absolute;
+    bottom: 162px;
+    right: 16px;
+    height: 45px;
+}
+
+.btnZoomOut{
+    position: absolute;
+    bottom: 97px;
+    right: 16px;
+    height: 45px;
+}
+
+/* 거리설정 버튼 */
+.navermap__btnSetSearchOpt{
+    /* bottom: 100px; */
+    position: absolute;
+    left: 720px;
+    top: 15px;
+}
+.navermap__btnSetSearchOpt>img{
+    margin: 0px;
+    width: 100%;
+    height: 100%;
+    padding: 8px;
+}
+/* 갯수설정 버튼 */
+.navermap__btnSetCountOpt{
+    /* bottom: 40px; */
+    position: absolute;
+    left: 790px;
+    top: 15px;
+}
+.navermap__btnSetCountOpt>img{
+    margin: 0px;
+    width: 100%;
+    height: 100%;
+    padding: 10px;
+}
+
+.dropdown-menu.navermap--radiusSettingDropdown{
+    padding:4px;
+    padding-left: 10px;
+    min-width: 85px;
+    /* z-index: 9999; */
+    /* background-color: red; */
+    /* 드랍다운 박스 */
+}
+.dropdown-menu.navermap--radiusSettingDropdown>li{
+    width: 80px;
+}
+/* 거리설정 드랍다운버튼 - 인라인으로 작동중 
+.btnSetSearchOpt__menulist{
+    margin-left: -340%;
+    margin-top: -100%;
+    padding: 0px;
+}
+*/
+
+.dropdown-menu.navermap--countSettingDropdown{
+    padding:4px;
+    padding-left: 10px;
+    min-width: 85px;
+    /* z-index: 9999; */
+    /* background-color: red; */
+    /* 드랍다운 박스 */
+}
+.dropdown-menu.navermap--countSettingDropdown>li{
+    width: 80px;
+}
+
+/* 카테고리설정 버튼 */
+.btnCategoryArea{
+    background-color: rgba(250, 250, 250, 1);
+    position: absolute;
+    left: 500px;
+    top: 15px;
+    height: 50px;
+    width: 200px;
+    border-radius: 20px;
+    box-shadow: 1px 1px 1px 1px rgba(200,200,200,0.8);
+    text-align: center;
+    line-height: 40px;
+    padding: 0px;
+    color: rgb(40,40,40);;
+    font-size: 13pt;
+}
+
+/* 지도 타입 버튼 */
+.btnMapOption.btn{
+    width: 100px;
+    height: 50px;
+    font-size: 13pt;
+    padding: 3px;
+    border-radius: 15px;
+    /* font-weight: 600; */
+    background-color: rgb(240, 240, 240);
+    box-shadow: 1px 1px 1px 1px rgba(200,200,200,0.8);
+    top: 25px;
+    position : absolute;
+
+}
+.btnNormal{
+    right: 260px;
+}
+.btnSatel{
+    right: 140px;
+}
+.btnTerrain{
+    right: 20px;
+}
+
+/* 버튼 disabled 상태 css */
+/* .btnCategoryArea:disabled {
+    background-color: red;
+} */
+.btnhtml--spinnerzone{
+    display: inline-block;
+    margin: 0px;
+    margin-right:8px;
+    width: 20px;
+    height: 20px;
+}
+.btnhtml--spinnertextzone{
+    display: inline;
+    padding: 0px;
+    padding-bottom: 3px;
+    line-height: 15px;
+    height: 30px;
+    font-size: 14pt;
+    color: rgb(40,40,40);
+    /* color: #212529; */
+    font-size: 13pt;
+}
+.btnCategoryArea>img{
+    width: 50px;
+    margin-right: -10px;
+    margin-left: -10px;
+}
+
+/* 카테고리설정 버튼 옵션 */
+.searchBarContainer{
+    position: absolute;
+}
+
+.container-fluid{
+    padding: 0px;
+}
+
+.navbar-toggler{
+    display: block;
+}
+
+.navbar-toggler.shortbtn{
+    left: 450px;
+    top: 70px;
+    background-color: rgba(250, 250, 250, 0.9);
+    border-radius: 25%;
+    border: 1px solid black;
+}
+
+/* 마커디자인 */
+/* .naverApiMap-mappingMarker:hover{
+    z-index: 99999; 안됨
+    background-color: green;
+} */
+.naverApiMap-mappingMarker{
+    border-radius: 23px;
+    border: 1px solid #0475f4;
+    background: #fff;
+    width: 100%;
+    min-width: 140px;
+    height: 40px;
+    font-weight: 550;
+    box-shadow: 0.2px 0.2px 0.2px 0.2px rgba(4, 117, 244,0.8);
+}
+.naverApiMap-mappingMarker--imageZone{
+    display: inline-block;
+    width: 40px;
+    margin: 0px;
+    border: none;
+    float: left;
+}
+.naverApiMap-mappingMarker--imageZone>img{
+    width: 30px;
+    line-height: 40px;
+    margin: 5px;
+}
+
+.naverApiMap-mappingMarker--mainZone{
+    display: inline-block;
+    min-width: 70px;
+    max-width: 90px;
+    border: none;
+    padding: 0px;
+    padding-right: 10px;
+    margin-left: -5px;
+    overflow: hidden;
+    font-weight: 550;
+    border-radius: 0px 20px 20px 0px;
+}
+.naverApiMap-mappingMarker--sideZone{
+    position: absolute;
+    background-color: white;
+    text-align: center;
+    display: block;
+    padding: 1px 5px;
+    height: 16px;
+    border: 1px solid #0475f4;
+    color: #0475f4;
+    font-weight: 550;
+    border-radius: 9px;
+    top: -4px;
+    left: 100%;
+    margin-left: -15px;
+    font-size: 11pt;
+    line-height: 11px;
+    box-shadow: 0 2px 4px 0 hsl(0deg 0% 48% / 20%);
+}
+
+.naverApiMap-mappingMarker--titleZone{
+    text-align: left;
+    line-height: 20px;
+    height: 20px;
+    padding: 0px;
+    /* color:rgba(10, 10, 10, 0.7);
+    font-size: 15px; */
+    margin-top: 3px;
+    display: block;
+    overflow: hidden;
+}
+
+.naverApiMap-mappingMarker--phoneNumberZone{
+    font-size: 10px;
+    text-align: left;
+    line-height: 20px;
+    height: 20px;
+    padding: 0px;
+    margin-top: -5px;
+    color:rgba(10, 10, 10, 0.6);
+}
+
+/* 클러스터 안 마커 디자인 */
+.clusterList{
+    list-style: none;
+    margin: 0px;
+    padding: 0px;
+}
+.clusterList>li{
+    height: 40px;
+    padding: 0px;
+    margin:0px
+}
+.clusterList>li>.naverApiMap-mappingMarker{
+    background-color: white;
+    border-top: 0.5px solid rgba(230, 230, 230, 0.8);
+    border-left: 0.5px solid rgba(230, 230, 230, 0.8);
+    border-right: 0.5px solid rgba(230, 230, 230, 0.8);
+    border-bottom: 0px solid black;
+    border-radius: 0px;
+    max-width: 270px;
+    height: 45px;
+}
+.clusterList>li>:last-child{
+    border-bottom: 0.5px solid rgba(230, 230, 230, 0.8);
+}
+
+.infowindowzone{
+    width: 130px;
+    max-height: 115px;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    /* 파이어폭스 스크롤바 설정 */
+    scrollbar-width: thin;
+    scrollbar-color: #217af4 transparent;
+    /* IE 스크롤바 설정 */
+    scrollbar-face-color: #217af4;
+}
+.infowindowzone::-webkit-scrollbar{
+    width: 4px;
+    border-radius: 10%;
+}
+.infowindowzone::-webkit-scrollbar-thumb{
+    background: #217af4; /* 스크롤바의 색상 */
+    border-radius: 10px;
+}
+.infowindowzone::-webkit-scrollbar-track {
+    background: rgba(33, 122, 244, .1);  /*스크롤바 뒷 배경 색상*/
+
+}
+
+/* range drag drop */
+*, *::after, *::before {
+	-webkit-user-select: none;
+	-webkit-user-drag: none;
+	-webkit-app-region: no-drag;
+	cursor: default;
+}
+
+/* radius range css */
+#radiusRange{
+    /* -webkit-appearance: none; */
+    height: 150px;
+    width: 15px;
+    border-radius: 5px;
+    background: #ccc;
+    outline: none;
+    /* IE */
+    writing-mode: bt-lr;
+    /* WebKit */
+    -webkit-appearance: slider-vertical; 
+    float: left;
+}
+
+#radiusRange::-moz-range-track {
+    background: #ccc;
+    border: 0;
+}
+
+#radiusRange::-moz-focus-inner { 
+  border: 0; 
+}
+#radiusRangeoutput{
+    display: inline-block;
+    height: 150px;
+    width: 40px;
+    font-size: 10pt;
+    margin-left: 10px;
+}
+#radiusRangeoutput>p{
+    margin-bottom: 7px;
+}
+
+/* count range css */
+#countRange{
+    -webkit-appearance: none;
+    height: 150px;
+    width: 15px;
+    border-radius: 5px;
+    background: #ccc;
+    outline: none;
+    writing-mode: bt-lr; /* IE */
+    -webkit-appearance: slider-vertical; /* WebKit */
+    float: left;
+}
+#countRange::-moz-range-track {
+    background: #ccc;
+    border: 0;
+}
+
+#countRange::-moz-focus-inner { 
+  border: 0; 
+}
+#countRangeoutput{
+    display: inline-block;
+    height: 150px;
+    width: 40px;
+    font-size: 10pt;
+    margin-left: 10px;
+}
+#countRangeoutput>p{
+    margin-bottom: 45px;
+}
+
+
+@media (max-width: 1250px) {
+    /* .btnMapOption.btn{
+        display: flex;
+    } */
+    .btnNormal{
+        margin-top: 0px;
+        right: 20px;
+    }
+    .btnSatel{
+        margin-top: 70px;
+        right: 20px;
+    }
+    .btnTerrain{
+        margin-top: 140px;
+        right: 20px;
+    }
+    
+}
+
+@media (max-width: 985px) {
+    .btnNormal{
+        margin-top: 55px;
+        right: 20px;
+    }
+    .btnSatel{
+        margin-top: 115px;
+        right: 20px;
+    }
+    .btnTerrain{
+        margin-top: 180px;
+        right: 20px;
+    }
+    
+}
+
+@media (max-width: 860px) {
+    .navermap__btnSetSearchOpt{
+        position: absolute;
+        left: 500px;
+        top: 80px;
+    }
+    .navermap__btnSetCountOpt{
+        /* bottom: 40px; */
+        position: absolute;
+        left: 560px;
+        top: 80px;
+    }
+
+    .btnNormal{
+        margin-top: -10px;
+        right: 20px;
+    }
+    .btnSatel{
+        margin-top: 55px;
+        right: 20px;
+    }
+    .btnTerrain{
+        margin-top: 120px;
+        right: 20px;
+    }
+}
+
+@media (max-width: 833px) {
+    /* .btnNormal{
+        margin-top: -10px;
+        right: 20px;
+    }
+    .btnSatel{
+        margin-top: 55px;
+        right: 20px;
+    }
+    .btnTerrain{
+        margin-top: 120px;
+        right: 20px;
+    } */
+    .btnNormal{
+        margin-top: 55px;
+        right: 20px;
+    }
+    .btnSatel{
+        margin-top: 115px;
+        right: 20px;
+    }
+    .btnTerrain{
+        margin-top: 180px;
+        right: 20px;
+    }
+}

@@ -1,0 +1,45 @@
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    # mysql Timezone 설정 및 encoding 설정.
+    #url : jdbc:mysql://192.168.240.250:3306/fm?serverTimezone=Asia/Seoul&useLegacyDatetimeCode=false&characterEncoding=UTF-8
+    url : jdbc:mysql://0.tcp.jp.ngrok.io:10129/fm?serverTimezone=Asia/Seoul&useLegacyDatetimeCode=false&characterEncoding=UTF-8
+    username: root
+    password: bizfm1234!
+
+#file server config
+  servlet:
+    multipart:
+      enabled: true
+      file-size-threshold: 2KB
+      max-file-size: 50MB
+      max-request-size: 215MB
+
+#spring boot 2.4 부터 지원하는 PathPattern 을 사용하면 Springfox 가 호환되지 않는 이슈가 있다. 
+  mvc:
+    pathmatch:
+      matching-strategy: ant-path-matcher
+      
+#이메일 인증을 위한 gmail smtp 설정      
+  mail:
+    host: smtp.gmail.com
+    port: 587
+    username: bizfm123@gmail.com
+    password: tgxgxbgwchqtphkv
+    properties:
+      mail:
+        smtp:
+          auth: true
+          starttls:
+            enable: true
+
+# camel case 설정.
+# 컬럼명 스네이크 케이스 -> 카멜케이스로 받아옴.
+mybatis:
+    configuration:
+        map-underscore-to-camel-case: true
+
+logging:
+  level:
+    '[com.biz.fm.repository]': warn
+    

@@ -1,0 +1,62 @@
+version: '3'
+
+services:
+  nginx:
+    image: nginx:alpine
+    container_name: fm-proxy
+    restart: always
+    ports:
+      - "80:80"
+      - "443:443"
+      - "3000:3000"
+    volumes:
+      - ./proxy/nginx.conf:/etc/nginx/nginx.conf
+      - ./data/certbot/conf:/etc/letsencrypt 
+      - ./data/certbot/www:/var/www/certbot
+    command: "/bin/sh -c 'while :; do sleep 6h & wait $${!}; nginx -s reload; done & nginx -g \"daemon off;\"'"
+  
+  certbot:
+    image: certbot/certbot
+    container_name: certbot
+    restart: unless-stopped
+    volumes:
+      - ./data/certbot/conf:/etc/letsencrypt
+      - ./data/certbot/www:/var/www/certbot
+    entrypoint: "/bin/sh -c 'trap exit TERM; while :; do certbot renew; sleep 12h & wait $${!}; done;'"
+  
+  back:
+    build:
+      context: ./back
+    image: fm-back
+    container_name: fm-back
+    environment:
+      - SPRING_DATASOURCE_URL=jdbc:mysql://database:3306/fm #container 내부 포트 사용해야함.         
+    expose:
+        - "8080"
+    volumes:
+      - /home/kim/fileStore:/fileStore
+    restart: "unless-stopped"
+    depends_on: #db와 의존성 연결. (DB가 켜져있어야 실행댐.)
+        - database
+        
+  front:
+    build:
+      context: ./front
+      # args:
+      #   - SERVER_URL=https://fm.bizplay.shop
+    image: fm-front
+    container_name: fm-front
+    restart: always
+    expose:
+        - "80"
+        
+  database:
+    image: mysql:latest
+    container_name: db
+    restart: always
+    env_file:
+      - ./db/.env
+    expose:
+        - "3306"
+    volumes:
+      - /home/kim/db/data:/var/lib/mysql

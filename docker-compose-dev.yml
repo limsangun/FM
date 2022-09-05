@@ -1,0 +1,14 @@
+version: '3'
+
+services:
+    back:
+        build:
+          context: ./fm
+          dockerfile: Dockerfile-dev
+        image: fm:dev
+        container_name: fm-dev
+        ports:
+          - "8080:8080"
+        volumes:
+          - D:/fileStore:/fileStore
+        restart: "unless-stopped"

@@ -1,0 +1,99 @@
+/* 전체 크기 설정 */
+.searchBarContainer{
+    display: inline-block;
+    position: absolute;
+    width: 100%;
+    top: 0px;
+}
+
+/* 위치 설정 */
+/* 왼족 검색창 위치 */
+.searchArea>.searchArea--Input{
+    position: absolute;
+    top: 15px;
+    left: 77px;
+}
+/* 오른쪽 유저정보 버튼 위치 */
+.searchArea>.dropdown{
+    position: absolute;
+    top: 25px;
+    right: 25px;
+}
+
+/* 오른쪽 유저정보 버튼 이미지설정 */
+.searchArea>.dropdown>img{
+    padding: 0px;
+    margin: 0px;
+    float: right;
+    width: 50px;
+    height: 50px;
+    border: 0px solid black;
+}
+
+/* 오른쪽 유저정보 버튼 드랍다운 메뉴리스트 */
+.dropdown-menu.searchArea--dropdown__dropdownlist{
+    min-width: 120px;
+    right: 0px;
+    top: 50px;
+    padding: 0px;
+    height: auto;
+}
+.dropdown-menu.searchArea--dropdown__dropdownlist>.card-header>p{
+    margin: 0px;
+}
+.dropdown-menu.searchArea--dropdown__dropdownlist>li{
+    padding: 0px;
+    width: 100%;
+}
+.dropdown-menu.searchArea--dropdown__dropdownlist>li>.dropdown-item{
+    margin: 0px;
+}
+
+/* 검색버튼 위치 */
+#searchArea--Input__searchBtn {
+    margin-left: -55px;
+    width: 55px;
+    font-size:1em;
+    outline:none;
+    box-sizing: border-box;
+    border-radius: 15px;
+    color:black;
+    border: none;
+    background-color: rgba(250, 250, 250, 0);
+}
+/* 위치 설정 끝 */
+
+/* 검색창 설정 */
+#searchArea__searchInput {
+    width: 330px;
+    border-radius: 15px;
+    line-height: 50px;
+    /* border: 0.3px solid rgba(10, 10, 10, 0.3); */
+    padding-left: 25px;
+    outline:none;
+    box-sizing: border-box;
+    color:rgba(10, 10, 10, 0.5);
+    background-color: rgba(250, 250, 250, 0.9);
+    /* box-shadow: 1px 1px 1px 1px rgba(130,130,130,0.6); */
+    box-shadow: 1px 1px 1px 1px rgba(200,200,200,0.8);
+}
+
+#searchArea__searchInput:focus {
+  outline: beige;
+}
+
+#searchArea--Input__searchIcon {
+  color: gray;
+}
+
+#searchArea--Input__searchIcon:hover {
+  color: #4287f5;
+  font-weight: bold;
+}
+
+.searchArea--Input{
+    z-index: 2;
+    margin: 0px;
+    padding: 0px;
+    height: fit-content;
+}

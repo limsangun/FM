@@ -1,0 +1,312 @@
+body {
+    background-color: rgb(248, 248, 248);
+}
+
+.businessList-Container {
+    height: 100%;
+    padding: 4%;
+    margin-top: 49px;
+    /* 마진 바텀 - 임시 */
+    /* margin-bottom: 100px; */
+}
+
+.text-secondary {
+    padding-top: 5px;
+}
+
+/* 카드 디자인 */
+.card {
+    /* box-shadow: 0 1px 3px 0 rgba(0,0,0,.1), 0 1px 2px 0 rgba(0,0,0,.06); */
+}
+
+.card {
+    position: relative;
+    display: flex;
+    background-color: #fff;
+    background-clip: border-box;
+    border: 0 solid rgba(0, 0, 0, 0.125);
+    border-radius: 0.25rem;
+}
+
+.card-body>.row>div,
+.card-body>.row>div>h6 {
+    height: 40px;
+    line-height: 40px;
+}
+
+.card-body>.row {
+    padding-left: 25px;
+    padding-right: 25px;
+}
+
+.card-body {
+    padding: 10px;
+    height: 400px;
+}
+
+.card-img-top.AddMenu--MenuList__MenuImg {
+    width: 250px;
+    height: 250px;
+    margin: auto;
+}
+
+hr {
+    margin: 10px;
+}
+
+.franinfozone--headerzone {
+    height: 265px;
+}
+
+.card.franinfozone--frantitle {
+    /* height: 420px; */
+    height: 620px;
+}
+
+.franmenuzone--bodyzone,
+.franmenuzone--menulistzone {
+    overflow: auto;
+}
+
+/* 메뉴추가 버튼 존 설정 */
+.card.franmenuzone>.card-body>.franmenuzone--headerzone>.btnAddMenuArea {
+    text-align: center;
+    line-height: 0px;
+}
+
+/* 메뉴리스트 인덱스 */
+.menulistIndex {
+    height: 150px;
+    border-bottom: 1px solid #f2f2f2;
+}
+
+/* 메뉴리스트 크기 설정 */
+.card.franmenuzone>.card-body>.franmenuzone--bodyzone>.franmenuzone--menulistzone {
+    min-height: 300px;
+}
+
+/* 메뉴리스트 메뉴사진 크기 설정 */
+.menulistImg {
+    margin-right: 30px;
+    padding: 0px;
+    width: 130px;
+    height: 130px;
+    float: left;
+    border-radius: 10px;
+}
+
+/* 메뉴리스트 이름칸 */
+.menulistMenuName {
+    height: 30px;
+}
+
+.menulistMenuName>span {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+/* 메뉴리스트 수정 삭제 버튼 칸 */
+.menulistButtonZone {
+    float: right;
+    margin-right: 30px;
+}
+
+/* 메뉴리스트 가격칸 */
+.menulistPriceZone {
+    color: #ff5757;
+    font-weight: bold;
+}
+
+/* 메뉴리스트 메뉴설명칸 */
+.menulistIntroZone {
+    margin-left: 133px;
+    line-height: 15px;
+}
+
+/* 사업자번호 인풋 */
+.card.franinfozone--frantitle>.card-body>.row>.businessListInput {
+    line-height: 30px;
+}
+
+.card.franinfozone--frantitle>.card-body>.row>.businessListInput.col-sm-10 {
+    overflow: hidden;
+}
+
+/* 전화번호존 */
+.card.franinfozone--frantitle>.card-body>.row>.telZone {
+    line-height: 30px;
+}
+
+.card.franinfozone--frantitle>.card-body>.row>.telZone>input {
+    background: rgb(210, 242, 250);
+}
+
+/* 영업시간 수정 높이 */
+.card.franinfozone--frantitle>.card-body>.row>.ordertime>div {
+    height: 30px;
+}
+
+/* 가맹점 정보 수정버튼 */
+.btn.btnEditInfo {
+    padding: 0px;
+    background-color: rgba(250, 250, 250, 0.9);
+    color: #4187f5;
+    border-radius: 10px;
+    border: 1px solid #4187f5;
+}
+
+.btn.btnMenu {
+    padding: 8px;
+    font-size: 16px;
+    width: 150px;
+    height: 38px;
+    border: 1px solid #4187f5;
+    float: right;
+    border-radius: 10px;
+    color: #4187f5;
+    background-color: rgba(250, 250, 250, 0.9);
+    line-height: 0px;
+}
+
+.franchiseeIntro {
+    height: 90px;
+    width: 250px;
+    border: none;
+    text-align: center;
+    resize: none;
+}
+
+.franchiseeIntro:focus {
+    outline: 0px;
+}
+
+.businessListImg {
+    width: 300px;
+    height: 250px;
+}
+
+#menuName::placeholder,
+#menuprice::placeholder {
+    font-size: 14px;
+}
+
+/* 가맹점 메뉴 없을시 디폴트 메뉴 css */
+.franmenuzone--menulistzone--defaultMenuZone {
+    text-align: center;
+    background-color: rgba(240, 240, 240, 0.5);
+    width: 50%;
+    height: 230px;
+    border-radius: 8px;
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.3);
+    margin: 30px auto;
+    padding: 5px;
+}
+
+.franmenuzone--menulistzone--defaultMenuZone>h1 {
+    font-size: 100px;
+}
+
+.franmenuzone--menulistzone--defaultMenuZone>div {
+    margin-top: 20px;
+}
+
+.franmenuzone--menulistzone--defaultMenuZone>div>p {
+    margin-bottom: 0px;
+    margin-top: -15px;
+}
+
+#businessList--franName {
+    padding-top: 15px;
+}
+
+#businessList--franTime {
+    margin-left: 10px;
+}
+
+#file-input {
+    display: none;
+}
+
+#file-Label {
+    cursor: pointer;
+}
+
+#menulistBtn--middle {
+    color: #4187f5;
+    opacity: 0.5;
+}
+
+@media (max-width: 1199px) {
+    .businessListImg {
+        width: 250px;
+        height: 300px;
+    }
+
+    .businessListInput {
+        overflow: hidden;
+    }
+
+    h6 {
+        width: 160px;
+        overflow: hidden;
+    }
+
+    .franchiseeIntro {
+        height: 50px;
+        width: 250px;
+    }
+
+    .ordertime {
+        height: 150px;
+    }
+
+    /* #franList {
+        width: 660px;
+    } */
+}
+
+@media (max-width: 991px) {
+    .businessListImg {
+        width: 170px;
+        height: 260px;
+    }
+
+    .franchiseeIntro {
+        height: 60px;
+    }
+
+    h6 {
+        width: 100px;
+        overflow: hidden;
+    }
+
+    .businessListInput {
+        margin-left: 40px;
+        width: 195px;
+        overflow: hidden;
+    }
+
+    .ordertime {
+        height: 150px;
+    }
+
+    .btnEditInfo {
+        width: 50px;
+    }
+
+    /* .accordion-item {
+        margin-top: 30px;
+    } */
+    .franchiseeIntro {
+        height: 50px;
+        width: 150px;
+    }
+
+    .runningTime {
+        min-width: 300px;
+    }
+
+    #franList {
+        width: 440px;
+    }
+}

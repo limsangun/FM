@@ -1,0 +1,183 @@
+.MapNav-cursor {
+    cursor: pointer;
+}
+
+/* 왼쪽 네비바 css */
+.outline>.MapNavbar-navArea {
+    position: absolute;
+    display: block;
+    height: 100%;
+    width: 62px;
+    background-color: #f2f6fc;
+    border-right: 1px solid #d9d9d9;
+    z-index: 2;
+}
+
+.MapNavbar-navArea--listZone {
+    width: 60px;
+    margin: 0px;
+    padding: 0px;
+}
+
+/* 왼쪽 네비바의 타이틀 로고 존 css */
+.MapNavbar-navArea--listZone>.nav-item.MapNavbar-navArea__title {
+    margin: 0px;
+    padding: 0px;
+    text-align: center;
+    display: block;
+    height: 74px;
+    width: 62px;
+    border-bottom: 1px solid #d9d9d9;
+}
+
+.MapNavbar-navArea--listZone>.nav-item.MapNavbar-navArea__title>a {
+    margin: 0px;
+    padding: 0px;
+    line-height: 68px;
+    width: 100%;
+    height: 100%;
+}
+
+.MapNavbar-navArea--listZone>.MapNavbar-navArea__title>a>img {
+    width: 40px;
+    border-radius: 10px;
+    opacity: 0.9;
+}
+
+
+.MapNavbar-navArea--listZone>.MapNavbar-navArea--buttonzone {
+    margin-top: 10px;
+    display: block;
+    width: 100%;
+}
+
+.MapNavbar-navArea--listZone>.MapNavbar-navArea--buttonzone>ul>li {
+    margin-bottom: 5px;
+}
+
+
+/* 제일 밑의 유저인포존 로그인 / 로그아웃 / 회원가입 관리 */
+.MapNavbar-navArea--listZone>.nav-item.MapNavbar-navArea__userInfozone {
+    position: absolute;
+    left: 0px;
+    bottom: 0px;
+    width: 100%;
+    min-height: 64px;
+    padding: 15px;
+    margin: 0px;
+    border-top: 1px solid #d9d9d9;
+    text-align: center;
+}
+
+.dropdown-menu.MapNavbar-userdropdownzone.show {
+    padding: 0px;
+    min-width: 300px;
+}
+
+.MapNavbar-userinfoTextzone {
+    width: 320px;
+    height: 65px;
+    padding: 8px;
+}
+
+.MapNavbar-userinfoTextzone__text {
+    width: 160px;
+    display: inline-block;
+    height: 48px;
+}
+
+.MapNavbar-userinfoTextzone>button {
+    width: 80px;
+    height: 40px;
+    font-size: 13px;
+    font-weight: bold;
+    text-align: 10px;
+    color: black;
+    border-radius: 10px;
+    border: 2px solid rgba(0, 0, 0, 0.6);
+    transition: all 0.4s;
+}
+
+.MapNavbar-userinfoTextzone>button:hover {
+    color: #fff;
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.MapNavbar-userinfoTextzone>img {
+    width: 48px;
+    height: 100%;
+    margin-right: 12px;
+}
+
+.MapNavbar-userdropdownzone>.MapNavbar-defaultButton {
+    height: 48px;
+}
+
+
+.MapNavbar-defaultButton>p {
+    margin-bottom: 0px;
+    height: 100%;
+    line-height: 40px;
+}
+
+/* 네비바 중간의 버튼 2개 */
+#goMypagebtn>a>img,
+#showPlacebtn>img {
+    width: 30px;
+}
+
+#goMypagebtn>p,
+#showPlacebtn>p {
+    color: #4287f5;
+    font-size: 9pt;
+    font-weight: 600;
+    margin-top: 2px;
+    margin-bottom: 20px;
+}
+
+.mapnavbar--spinnerzone {
+    margin: 0px auto;
+    width: 30px;
+    height: 30px;
+}
+
+.mapnavbar--spinnertextzone {
+    color: #4287f5;
+    font-size: 9pt;
+}
+
+/* 네비바 아래 유저 드랍다운 */
+#userdropdown {
+    width: 30px;
+}
+
+/* SearchResultList 키는 버튼 */
+#btnSearchListOpen {
+    width: 22px;
+    height: 49px;
+    position: absolute;
+    left: 62px;
+    top: 50%;
+    z-index: 1;
+    background-color: #f2f6fc;
+    border-left: none;
+    border-right: 1px solid #d9d9d9;
+    border-top: 1px solid #d9d9d9;
+    border-bottom: 1px solid #d9d9d9;
+    border-radius: 0%;
+}
+
+/* SearchResultList 끄는 버튼 */
+#btnSearchListClose {
+    width: 22px;
+    height: 49px;
+    position: absolute;
+    top: 50%;
+    z-index: 1;
+    background-color: #f2f6fc;
+    border-left: none;
+    border-right: 1px solid #d9d9d9;
+    border-top: 1px solid #d9d9d9;
+    border-bottom: 1px solid #d9d9d9;
+    border-radius: 0%;
+}

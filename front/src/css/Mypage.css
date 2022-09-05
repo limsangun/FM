@@ -1,0 +1,308 @@
+/* Mypage */
+.Mypage--Container {
+    height: auto;
+    padding: 4%;
+    margin-top: 49px;
+}
+
+/* 카드 디자인 */
+.card {
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+}
+
+.card {
+    position: relative;
+    display: flex;
+    background-color: #fff;
+    background-clip: border-box;
+    border: 0 solid rgba(0, 0, 0, 0.125);
+    border-radius: 0.25rem;
+}
+
+.card-body {
+    padding: 10px;
+}
+
+.userinfozone--headerzone {
+    height: 265px;
+}
+
+.card.userinfozone--usertitle {
+    /* height: 265px; */
+    height: 450px;
+}
+
+/* 가맹점리스트 리스트그룹 디자인 */
+.fransimpledatazone--franlistzone>.list-group {
+    padding-left: 10px;
+    padding-right: 10px;
+    height: 260px;
+    /* overflow-y: scroll; */
+    /* 스크롤 없애기 */
+    -ms-overflow-style: none;
+    /* IE and Edge */
+    scrollbar-width: none;
+    /* Firefox */
+}
+
+/* 스크롤 없애기 */
+.fransimpledatazone--franlistzone>.list-group::-webkit-scrollbar {
+    display: none;
+    /* Chrome , Safari , Opera */
+}
+
+/* 가맹점 리스트 리스트그룹 내용 디자인 */
+.fransimpledatazone--franlistzone>.list-group>.list-group-item {
+    border-top: 0px solid black;
+    border-left: 0px solid black;
+    border-right: 0px solid black;
+    border-bottom: 0.3px solid rgba(10, 10, 10, 0.3);
+    margin-bottom: 14px;
+    height: 40px;
+    line-height: 40px;
+}
+
+.delFranbtn {
+    margin: 0px;
+    text-align: center;
+    padding: 0px;
+    height: 30px;
+    line-height: 25px;
+}
+
+.delFranbtn.btn.btn-danger {
+    width: 40px;
+}
+
+.mypage__title {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.mypage__title__suv {
+    position: relative;
+    top: 16px;
+}
+
+.mypage__title__address {
+    font-size: 14px;
+}
+
+.mypage__section {
+    margin-top: 4px;
+}
+
+.mypage__section__birth {
+    position: relative;
+    top: 10px;
+}
+
+.mypage__section__phone {
+    position: relative;
+    top: 70px;
+}
+
+.mypage__caution {
+    font-size: 12px;
+    font-weight: 400;
+    color: green;
+}
+
+.mypage__imput {
+    background-color: #f9f9f9;
+    width: 480px;
+    height: 40px;
+    border-radius: 10px;
+    padding-left: 16px;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.mypage__address__section {
+    display: block;
+}
+
+.mypage__address__input {
+    margin-bottom: 0px;
+}
+
+.mypage__update__button {
+    position: relative;
+    top: 90px;
+    left: 26px;
+    width: 110px;
+    height: 40px;
+    border-radius: 10px;
+    background-color: #2178eb;
+    border: 1px solid #2178eb;
+    color: white;
+}
+
+.mypage__image {
+    font-size: 140px;
+}
+
+.mypage__info {
+    position: relative;
+    top: -20px;
+}
+
+.mypage__nickname {
+    font-size: 24px;
+}
+
+.mypage__email {
+    position: relative;
+    top: -10px;
+    font-size: 14px;
+    color: rgba(0, 0, 0, 0.4);
+}
+
+.mypage__dropdown {
+    position: relative;
+    bottom: 100px;
+    left: 100px;
+}
+
+.mypage__dropdown__item {
+    height: 30px;
+}
+
+.mypage__dropdown__delete:hover {
+    background-color: #fa5137;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.mypage__address__input__cursor:hover {
+    cursor: pointer;
+}
+
+/* 마이페이지 프렌차이즈 리스트 아래의 검색창 css */
+#franSearchbar {
+    text-align: center;
+    color: rgb(40, 40, 40);
+    font-weight: 500;
+}
+
+.Mypage-FranText:hover {
+    font-weight: bold;
+    font-size: 17px;
+    cursor: pointer;
+}
+
+.Mypage-FranDetail:hover {
+    font-size: 17px;
+    font-weight: bold;
+}
+
+@media (max-width: 1400px) {
+    .delFranbtn {
+        width: 60px;
+    }
+
+    .emailLabel {
+        width: 60px;
+    }
+
+    .phonNumLabel {
+        width: 60px;
+    }
+}
+
+@media (max-width: 1199px) {
+    .delFranbtn {
+        width: 60px;
+    }
+
+    .emailLabel {
+        width: 60px;
+    }
+
+    .phonNumLabel {
+        width: 60px;
+    }
+
+    #franList {
+        width: 655px;
+    }
+}
+
+@media (max-width: 991px) {
+
+    .delFranbtn {
+        width: 60px;
+        margin-right: 0px;
+        padding-left: 0px;
+    }
+
+    .emailLabel {
+        width: 60px;
+    }
+
+    .fullAddress {
+        overflow: hidden;
+    }
+
+    .phonNumLabel {
+        width: 60px;
+    }
+
+    .mypage__imput {
+        width: 340px;
+    }
+
+    .mypage__image {
+        margin-top: 60px;
+        font-size: 100px;
+    }
+
+    .mypage__nickname {
+        font-size: 20px;
+    }
+
+    .mypage__email {
+        font-size: 10px;
+    }
+
+    .mypage__dropdown {
+        position: relative;
+        top: -94px;
+        left: 70px;
+    }
+}
+
+@media (max-width: 768px) {
+    .emailLabel {
+        width: 60px;
+    }
+
+    .fullAddress {
+        overflow: hidden;
+    }
+
+    .phonNumLabel {
+        width: 60px;
+    }
+
+    .mypage__imput {
+        width: 240px;
+    }
+
+    .mypage__image {
+        margin-top: 70px;
+        font-size: 70px;
+    }
+
+    .mypage__nickname {
+        font-size: 16px;
+    }
+
+    .mypage__email {
+        font-size: 8px;
+    }
+
+    .mypage__dropdown {
+        position: relative;
+        top: -90px;
+        left: 52px;
+    }
+}

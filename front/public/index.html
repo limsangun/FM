@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <link rel="icon" href="/favicon.ico" />
+    <!-- jqury -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+
+    <!-- naver map api -->
+    <script type="text/javascript"
+        src="https://openapi.map.naver.com/openapi/v3/maps.js?ncpClientId=j3827m3yos"></script>
+
+    <!-- <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" /> -->
+
+    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap" rel="stylesheet">
+    <script type="text/javascript" src="./MarkerClustering.js"></script>
+    <style type="text/css">
+        html,
+        body,
+        #root {
+            height: 100%;
+        }
+
+        * {
+            font-family: 'Noto Sans KR', sans-serif;
+        }
+
+        .Toastify>.Toastify__toast-container {
+            top: 5em;
+        }
+    </style>
+    <title>FM Project</title>
+</head>
+
+<body onbeforeunload="">
+    <div id="root">
+
+    </div>
+    <script>
+        var markerClustering;
+
+        $(function () {
+            //실행과 동시에 클러스터링 객체 생성
+            let resultString;
+            let frontShowString;
+
+            const checkStringCount = (value, count) => {
+                value=String(value);
+                if (value.length > count) {
+                    return value.substr(0, count-1) + ' ...';
+                } else return value;
+            };
+
+            test.setRadius = function (value) {
+                value = parseInt(value);
+                switch (value) {
+                    case 0: test.radius = 200; break;
+                    case 1: test.radius = 500; break;
+                    case 2: test.radius = 1000; break;
+                    case 3: test.radius = 5000; break;
+                    case 4: test.radius = 10000; break;
+                    case 5: test.radius = 20000; break;
+                }
+            }
+
+            test.changeRadValue = function (values) {
+                document.getElementById("radiusRange").value = values;
+                test.setRadius(values);
+            }
+
+            test.setCount = function (value) {
+                value = parseInt(value);
+                switch (value) {
+                    case 0: test.count = 100; break;
+                    case 1: test.count = 300; break;
+                    case 2: test.count = 500; break;
+                }
+            }
+
+            test.changeCountValue = function (values) {
+                document.getElementById("countRange").value = values;
+                test.setCount(values);
+            }
+
+            test.doCluster = function () {
+                for (var i = 0, ii = test.markers[0].length; i < ii; i++) {
+                    test.resultMarkers.push(test.markers[0][i]);
+                }
+
+                window.markerClustering = new MarkerClustering({
+                    minClusterSize: 2,
+                    maxZoom: 22,
+                    map: test.map,
+                    markers: test.resultMarkers,
+                    disableClickZoom: true,
+                    gridSize: 150,
+                    icons: [htmlMarker1],
+                    indexGenerator: [5],
+                    averageCenter: false,
+                    stylingFunction: function (clusterMarker, count) {
+                        test.infowindows.close();
+
+                        if ($(markerClustering)[0] != null) {
+                            for (var idx = 0; idx < $(markerClustering)[0]._clusters.length; idx++) {
+                                if ($(markerClustering)[0]._clusters[idx]._clusterMember.length > 1) {
+                                    var clusterContent = $(markerClustering)[0]._clusters[idx]._clusterMember[0].icon.content;
+                                    clusterPhoneContent = clusterContent.substring(clusterContent.indexOf('<div class="naverApiMap-mappingMarker--phoneNumberZone"><span>') + 62, clusterContent.indexOf('</span></div></div></div>'))
+                                    clusterContent = clusterContent.substring(clusterContent.indexOf('<span>') + 6, clusterContent.indexOf('</span>'));
+                                    if ($(markerClustering)[0]._clusters[idx]._clusterMember[0].position.x == clusterMarker.position.x) {
+                                        $(clusterMarker.getElement()).find('div:nth-child(2)>div:nth-child(1)').text(checkStringCount(clusterContent,8));
+                                        $(clusterMarker.getElement()).find('div:nth-child(2)>div:nth-child(2)').text(clusterPhoneContent);
+                                    }
+                                }
+                            }
+                        }
+
+                        $(clusterMarker.getElement()).find('div:nth-child(3)').text('+' + (count - 1));
+
+                        //클릭
+                        $(clusterMarker.getElement()).on("click", function () {
+                            test.clusterMarkers = [];
+                            test.clusterMarkers.push(clusterMarker);
+                            test.infowindows.close();
+                            for (var idx = 0; idx < markerClustering._clusters.length; idx++) {
+                                if (markerClustering._clusters[idx]._clusterMarker.position.x == test.clusterMarkers[0].position.x && markerClustering._clusters[idx]._clusterMarker.position.y == test.clusterMarkers[0].position.y) {
+                                    resultString = "<div class='infowindowzone'><ul class='clusterList'>";
+                                    for (var j = 0; j < markerClustering._clusters[idx]._clusterMember.length; j++) {
+                                        resultString = resultString + "<li role='button' onclick={test.togOn(markerClustering._clusters[" + idx + "]._clusterMember[" + j + "].title,test.searchData[0]);}>" + markerClustering._clusters[idx]._clusterMember[j].icon.content + "</li>";
+                                    }
+                                    resultString = resultString + "</ul></div>";
+                                    test.infowindows.setContent(resultString);
+                                    test.infowindows.open(test.map, clusterMarker);
+                                }
+                            }
+                        })
+                    }
+                });
+
+                //장소검색 이벤트 / loading 에 따라 refresh
+                let movingLatLng = new naver.maps.LatLng(test.map.getCenter().y + 0.00000001, test.map.getCenter().x);
+                // window.markerClustering.map.refresh();
+                test.map.setCenter(movingLatLng);
+            }
+            test.removeCluster = function () {
+                //클러스터 마커 안보이도록 설정 + 누적안되도록 설정
+                if (test.resultMarkers.length > 0) {
+                    for (var idx = 0; idx < markerClustering._clusters.length; idx++) {
+                        markerClustering._clusters[idx]._clusterMarker.setVisible(false)
+                        markerClustering._clusters[idx]._clusterMember = []
+                    }
+                    for (var idx = 0; idx < test.resultMarkers.length; idx++) {
+                        test.resultMarkers[idx].setVisible(false);
+                    }
+                    markerClustering.markers = [];
+                    test.clusterMarkers = [];
+                    test.markers.pop();
+                    test.searchData.pop();
+                    test.resultMarkers = [];
+                }
+                if (test.placeMarker.length > 0) {
+                    for (var idx = 0; idx < test.placeMarker.length; idx++) {
+                        test.placeMarker[idx].setVisible(false);
+                    }
+                }
+            }
+            test.removePlaceMarker = function () {
+                if (test.placeMarker.length > 0) {
+                    for (var idx = 0; idx < test.placeMarker.length; idx++) {
+                        test.placeMarker[idx].setVisible(false);
+                    }
+                }
+            }
+
+        })
+
+        //마커 디자인
+        var htmlMarker1 = {
+            content:
+                `<div class="naverApiMap-mappingMarker">
+                <div class="naverApiMap-mappingMarker--imageZone">
+                    <img src="/img/restImg.png">
+                </div>
+                <div class="naverApiMap-mappingMarker--mainZone">
+                    <div class="naverApiMap-mappingMarker--titleZone">
+                        <span>${markerClustering}</span>
+                    </div>
+                    <div class="naverApiMap-mappingMarker--phoneNumberZone">
+                        <span></span>
+                    </div>
+                </div>
+                <div class="naverApiMap-mappingMarker--sideZone">
+                </div>
+            </div>`,
+            size: N.Size(20, 20),
+            anchor: N.Point(0, 30)
+        };
+
+        var test = { markers: [], resultMarkers: [], clusterMarkers: [], searchData: [], placeMarker: [], clusterList: [], radius: '200', count: '500', movedCenterCircle: new naver.maps.Circle(), infowindows: new naver.maps.InfoWindow() };
+        var toast = {
+            toastdefaultOption: {
+                position: "top-right",
+                autoClose: 3000,
+                hideProgressBar: false,
+                closeOnClick: true,
+                pauseOnHover: false,
+                draggable: true,
+                progress: undefined,
+            }
+        };
+
+        //인포윈도우 디자인
+        test.infowindows = new naver.maps.InfoWindow({
+            content: 'default mesage',
+            backgroundColor: "rgb(255, 255, 255)",
+            borderWidth: 0.5,
+            borderColor: "#4287f5",
+            disableAnchor: true,
+            pixelOffset: new naver.maps.Point(68, -10),
+        });
+    </script>
+</body>
+
+</html>

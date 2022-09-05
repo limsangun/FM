@@ -1,0 +1,51 @@
+version: '3'
+
+services:
+    nginx:
+        image: nginx:alpine
+        container_name: fm-proxy
+        restart: always
+        ports:
+          - "80:80"
+          - "3000:3000"
+        volumes:
+          - D:/FM/branches/dev/application/proxy/nginx.conf:/etc/nginx/nginx.conf
+    back:
+        build:
+          context: ./fm
+        image: fm-back
+        container_name: fm-back
+        environment:
+          - SPRING_DATASOURCE_URL=jdbc:mysql://database:3306/fm #container 내부 포트 사용해야함.         
+        expose:
+            - "8080"
+        volumes:
+          - /home/ubuntu/uploads:/uploads
+        restart: "unless-stopped"
+        depends_on: #db와 의존성 연결. (DB가 켜져있어야 실행댐.)
+            - database
+          
+    front:
+        build:
+          context: ./front
+          args:
+            - SERVER_URL=http://192.168.240.250:80
+        image: fm-front
+        container_name: fm-front
+        restart: always
+        expose:
+            - "80"
+          
+    database:
+        image: mysql:latest
+        container_name: db
+        restart: always
+        env_file:
+          - ./db/.env
+        expose:
+            - "3306"
+        #ports:
+        #  - "3366:3306"
+        volumes:
+          #- /home/ubuntu/db/data:/var/lib/mysql
+          - D:/db:/var/lib/mysql

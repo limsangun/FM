@@ -1,0 +1,306 @@
+.searchDeatil-offcanvas.offcanvas {
+    margin-top: 105px;
+    height: 780px;
+    border-radius: 28px;
+    padding: 5px;
+    border: 0.5px solid rgba(170, 170, 170, 0.5);
+    margin-left: 20px;
+    box-shadow: 1px 1px 1px 1px rgba(200, 200, 200, 0.8);
+    /* box-shadow: 1px 1px 1px 1px rgba(130,130,130,0.6); */
+    z-index: 2;
+}
+
+.offcanvas-header {
+    border-bottom: 0.5px solid rgba(230, 230, 230, 0.7);
+    /* box-shadow: 0px 1px 0px 0px rgba(230,230,230,0.9); */
+}
+
+/* 대표이미지 css */
+#offcanvas-body--firstImg {
+    display: block;
+    overflow: hidden;
+    border-radius: 15px;
+    border: 0.5px solid rgb(220, 220, 220);
+}
+
+.offcanvas-body--titlezone>div>#onlyFirstImgzone {
+    width: 100%;
+    height: 200px;
+}
+
+.offcanvas-body--titlezone>div>#firstImgzone {
+    display: inline-block;
+    width: 50%;
+    height: 200px;
+    float: left;
+}
+
+.offcanvas-body--titlezone>div>#outImgzone {
+    display: inline-block;
+    width: 50%;
+    height: 200px;
+    /* border: 0.5px solid rgb(160,160,160); */
+}
+
+#outImgzone>* {
+    border: 0.5px solid gray;
+}
+
+/* 대표이미지 아래 설명존 css */
+#offcanvas-body--titlezone--intro>h3 {
+    border-top: 0px;
+    margin-top: 20px;
+    padding-top: 0px;
+}
+
+#offcanvas-body--titlezone--intro>p {
+    padding-top: 0px;
+    margin-bottom: 10px;
+}
+
+/* 바디존 css */
+.searchDeatil-offcanvasbody--bodyzone {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+.searchDeatil-offcanvasbody--bodyzone::-webkit-scrollbar {
+    display: none;
+}
+
+.searchDeatil-offcanvasbody--buttonzone>* {
+    text-align: left;
+}
+
+/* 정보, 메뉴, 리뷰 버튼존 css */
+.searchDeatil-offcanvasbody--buttontab.nav {
+    text-align: center;
+    width: 100%;
+    height: 42px;
+    /* z-index: 3; */
+}
+
+.searchDeatil-offcanvasbody--buttontab.nav>.nav-item {
+    padding: 0px;
+    border: none;
+    margin-top: 0px;
+    text-align: center;
+}
+
+.searchDeatil-offcanvas.offcanvas.offcanvas-start.show {
+    /* margin-left: 480px; */
+    width: 380px;
+    margin-left: 470px;
+}
+
+.searchDeatil-offcanvasbody--cardzone {
+    width: 100%;
+}
+
+.searchDeatil-offcanvasbody--cardzone.card {
+    background-color: rgba(240, 240, 240, 0.5);
+    border-radius: 8px;
+    height: 115px;
+}
+
+.searchDeatil-offcanvasbody--cardzone>* {
+    text-align: left;
+}
+
+/* 메뉴이미지 */
+.searchDeatil-offcanvasbody--cardzone.card>.card-body>img {
+    width: 90px;
+    height: 85px;
+    float: left;
+    margin-right: 10px;
+    border-radius: 6px;
+}
+
+#addMenu-inputbox__imagelabel {
+    border-radius: 0.25rem;
+}
+
+/* .searchDeatil-offcanvasbody--cardzone.card>.card-body>div>img{
+    width: 90px;
+    height: 85px;
+    float: left;
+    margin-right: 10px;
+    border-radius: 6px;
+} */
+
+.searchDeatil-offcanvasbody--outlookzone {
+    padding: 0px;
+    width: 100%;
+    height: 300px;
+    overflow: auto;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+.searchDeatil-offcanvasbody--outlookzone::-webkit-scrollbar {
+    display: none;
+}
+
+.searchDeatil-offcanvasbody--outlookzone>div {
+    display: inline-block;
+    width: 50%;
+    padding: 2px;
+    box-sizing: border-box;
+}
+
+.searchDeatil-offcanvasbody--outlookzone>div>img {
+    width: 100%;
+    border-radius: 8px;
+    /* display: inline-block;
+    width: 50%;
+    border-radius: 8px;
+    padding: 2px;
+    box-sizing: border-box; */
+}
+
+/* .searchDeatil-offcanvasbody--reviewCardzone.card{
+    background-color: rgba(240,240,240,0.5);
+}
+.searchDeatil-offcanvasbody--reviewCardzone>.card-body>img{
+    width: 100px;
+    height: 65px;
+    margin-right: 10px;
+    float: left;
+} */
+
+.offcanvas.searchDeatil-offcanvas {
+    transition-duration: 0ms;
+}
+
+.priceText.card-subtitle {
+    color: #ff5757;
+}
+
+/* 영업시간 아코디언 디자인 css */
+#searchDeatil-offcanvasbody--runtimezome>.accordion>.accordion-item {
+    border: 0px;
+}
+
+#searchDeatil-offcanvasbody--runtimezome>.accordion>.accordion-item>.accordion-header {
+    background-color: white;
+}
+
+#searchDeatil-offcanvasbody--runtimezome>.accordion>.accordion-item>.accordion-header>.accordion-button {
+    padding: 0px;
+    background-color: white;
+}
+
+#searchDeatil-offcanvasbody--runtimezome>.accordion>.accordion-item>.accordion-header>.accordion-button.collapsed {
+    padding: 0px;
+    background-color: white;
+}
+
+#searchDeatil-offcanvasbody--runtimezome>.accordion>.accordion-item>.accordion-header>.accordion-button {
+    border: 0px solid black;
+    box-shadow: none;
+    background-color: white;
+    color: black;
+}
+
+/* 메뉴없을 시 나오는 화면 css*/
+.searchDeatil-offcanvasbody--defaultMenuZone {
+    margin-top: 10%;
+    text-align: center;
+    background-color: rgba(240, 240, 240, 0.5);
+    width: 100%;
+    height: 200px;
+    border-radius: 8px;
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.3);
+}
+
+.searchDeatil-offcanvasbody--defaultMenuZone>h1 {
+    font-size: 100px;
+}
+
+.searchDeatil-offcanvasbody--defaultMenuZone>p {
+    margin-top: 15px;
+}
+
+.searchDetail--outlookImg-label-img,
+.searchDetail--outlookImg-label-text {
+    /* height: 25px; */
+    color: white;
+    text-align: center;
+
+}
+
+.searchDetail--outlookImg-label-img>* {
+    margin-top: -5px;
+    font-size: 15pt;
+}
+
+.searchDetail--outlookImg-label-text {
+    margin-top: -20px;
+}
+
+/* 메뉴 디테일 모달 */
+#detailMenu--imagezone {
+    float: left;
+    width: 150px;
+    margin-right: 15px;
+}
+
+#detailMenu--imagezone>img {
+    width: 100%;
+    border-radius: 13px;
+    border: 0.5px solid rgba(230, 230, 230, 0.7);
+}
+
+#detailMenu--textzone {
+    padding: 5px;
+    display: block;
+    width: 100%;
+}
+
+#detailMenu--textzone__menuname>p {
+    font-size: 12pt;
+    margin-bottom: 8px;
+}
+
+#detailMenu--textzone__menuprice {
+    margin-top: 20px;
+}
+
+#detailMenu--textzone__menuprice>p {
+    font-size: 12pt;
+    margin-bottom: 8px;
+}
+
+#detailMenu__introlabel {
+    display: block;
+    text-align: center;
+    width: 45px;
+    padding: 0px;
+    height: 25px;
+    margin-top: 15px;
+    margin-left: 15px;
+    background-color: rgba(255, 255, 255, 1);
+    border: 0.5px solid rgb(220, 220, 220);
+    border-radius: 15px;
+}
+
+#detailMenu--introzone {
+    border: 0.5px solid rgb(220, 220, 220);
+    margin-top: -10px;
+    border-radius: 15px;
+    width: 100%;
+    min-height: 150px;
+    padding: 8px;
+    background-color: rgba(0, 0, 0, 0);
+}
+@media ( max-height:881px ) {
+    .searchDeatil-offcanvas.offcanvas{
+        height: 600px;
+    }
+}
+
+@media ( max-height:701px ) {
+    .searchDeatil-offcanvas.offcanvas{
+        height: 500px;
+    }
+}

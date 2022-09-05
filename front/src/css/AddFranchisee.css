@@ -1,0 +1,276 @@
+.runningTime {
+    /* width: 80%; */
+    width: 100%;
+    height: 35px;
+    border: 1px solid black;
+    text-align: center;
+    line-height: 35px;
+    border-radius: 10px;
+    margin: 10px auto;
+    overflow: hidden;
+}
+
+.AddFran--BusinessChkBtn {
+    border: 1px solid #0d6efd;
+    background-color: #0d6efd;
+    color: white;
+    width: 15%;
+    border-radius: 0.25em;
+}
+
+#AddFran--BusinessNumTrue {
+    margin-left: 5px;
+    color: green;
+    font-size: 8pt;
+}
+
+.AddFran--BusinessNumFalse {
+    margin-left: 5px;
+    color: red;
+    font-size: 8pt;
+}
+
+.AddFran--FranIntro {
+    height: 100px;
+    resize: none;
+    margin-top: 20px;
+}
+
+.AddFran--handleBtn {
+    border: none;
+    font-weight: bold;
+    background-color: white;
+}
+
+.AddFran--handleBtn:hover {
+    border: none;
+    font-weight: bold;
+    opacity: 0.5;
+}
+
+.AddFran--timeBtn {
+    width: 100%;
+    background-color: white;
+    color: black;
+    border: 1px solid #e2e5e8;
+}
+
+.runningTime--dayLabel {
+    margin-right: 10px;
+}
+
+.AddFran--BusinessNumInput::placeholder,
+.AddFran--input::placeholder,
+.AddFran--FranIntro::placeholder {
+    font-size: 14px;
+}
+
+.form-control:focus {
+    outline: none;
+    border: 2px solid #86b7fe;
+    box-shadow: none;
+}
+
+.AddFran--fromHours {
+    overflow: hidden;
+}
+
+.runningTime--middle {
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.runningTime--Time {
+    width: 35px;
+    text-align: center;
+    padding: 0 5px;
+    border-radius: 5px;
+    border: none;
+    font-weight: 700;
+    -webkit-appearance: none;
+    /* 크롬 화살표 없애기 */
+    -moz-appearance: none;
+    /* 파이어폭스 화살표 없애기 */
+    appearance: none;
+    /* 화살표 없애기 */
+    line-height: 2rem;
+    letter-spacing: -0.3px;
+    background-color: white;
+}
+
+.runningTime--Time:focus {
+    /* background-color: #e2e5e8; */
+    outline: none;
+}
+
+.runningTime--Hours,
+.runningTime--Minute {
+    background-color: white;
+}
+
+.runningTime--dayOff {
+    margin-left: 10px;
+}
+
+.runningTime--Hours,
+.runningTime--Minute {
+    font-weight: bold;
+    padding-bottom: 60px;
+}
+
+
+
+.franchiseeadd-container__postcol>* {
+    margin-bottom: 5px;
+}
+
+.AddFrenchisee-mapzone {
+    text-align: center;
+    padding: 0px auto;
+    margin-left: 5px;
+    margin-top: 15px;
+}
+
+.AddFrenchisee-mapzone__map {
+    border: 1px solid rgb(210, 210, 210);
+    border-radius: 10px;
+}
+
+#addFran-inputbox {
+    width: 100%;
+    height: 100%;
+}
+
+#addFran-inputbox--filebox input[type="file"] {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    border: 0;
+}
+
+#addFran-inputbox__imagelabel {
+    width: 130px;
+    height: 140px;
+    padding-top: 30px;
+    cursor: pointer;
+    background-repeat: no-repeat;
+    background-size: 130px 140px;
+    border: 1px solid rgb(210, 210, 210);
+
+}
+
+.addFran-inputbox__text {
+    text-align: center;
+}
+
+#AddFran-FirstImg {
+    position: absolute;
+    top: 50px;
+    left: 30px;
+}
+
+.AddFran--backImg {
+    width: 95px;
+    height: 80px;
+    /* margin-left: 5px;
+    margin-top: 5px; */
+    margin-top: 5px;
+    border-radius: 5px;
+}
+
+#backImg0 {
+    margin-left: 17px;
+}
+
+.AddFran-BackImgRow {
+    margin-top: 10px;
+}
+
+.AddFran-BackImgCol {
+    width: 100%;
+    /* margin-left: 20px; */
+    padding: 0px 12px;
+}
+
+.AddFran--InfoInput-filebox input[type="file"] {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    border: 0;
+}
+
+#AddFran--InfoInput-label {
+    position: relative;
+    top: 5px;
+    float: left;
+    width: 95px;
+    height: 80px;
+    /* display: inline-block; */
+    /* margin-left: 15px; */
+    color: #999;
+    font-size: inherit;
+    vertical-align: middle;
+    background-color: #fdfdfd;
+    cursor: pointer;
+    border: 1px solid #e2e5e8;
+    border-bottom-color: #e2e2e2;
+    border-radius: .25em;
+    line-height: 30px;
+    text-align: center;
+    background-repeat: no-repeat;
+    background-size: 170px 150px;
+    padding-top: 30px;
+}
+
+.AddFran--InfoInput-label-text {
+    width: 100px;
+}
+
+#fileCircles {
+    border: 2px solid #e2e5e8;
+    margin: -6px auto;
+    line-height: 28px;
+    width: 30px;
+    height: 30px;
+    border-radius: 100px;
+}
+
+input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+
+.AddFran-backImgZone {
+    /* margin-left: 10px; */
+    margin-top: 10px;
+    width: 89px;
+}
+
+.AddFran-backImg-DelBtn {
+    position: relative;
+    border: none;
+    width: 17px;
+    line-height: 5px;
+    height: 20px;
+    background-color: white;
+    border-radius: 0px 4px 0px 0px;
+    top: -26px;
+    left: -17px;
+}
+
+#addFranchisee-backImgText {
+    font-size: 14px;
+}
+
+.AddFran--awesome {
+    margin-left: 5px;
+}

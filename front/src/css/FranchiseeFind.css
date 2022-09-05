@@ -1,0 +1,199 @@
+.find__main{
+    margin: 0 150px;
+    min-width: 400px;
+}
+.find__main__header{
+}
+
+.find__main__sub{
+    display: block;
+    font-size: 1.9rem;
+    line-height: 2.6rem;
+    letter-spacing: -.48px;
+    color: #242424;
+    text-align: center;
+    word-break: keep-all;
+    word-wrap: break-word;
+}
+.find__main__control{
+    display: flex;
+    margin-top: 60px;
+    flex-direction: column;
+}
+.cntl__sel{
+    padding-bottom: 14px;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+}
+
+.cntl__sel label{
+    padding: 0;
+    font-size: 2rem;
+    font-weight: 600;
+    letter-spacing: -.5px;
+    color: #000;
+}
+
+.cntl__sel input{
+    margin-right: 10px;
+    height: 25px;
+    width: 25px;
+}
+
+.cntl__input{
+    padding-bottom: 14px;
+    display: flex;
+    height: 70px;
+}
+
+.cntl__input select{
+    margin-right: 10px;
+    width: 90px;
+}
+
+.cntl__input input{
+    width: 100%;
+}
+
+.cntl__danger{
+    height: 1rem;
+    color: #ff5757;
+}
+.find__button{
+    margin-top: 64px;
+}
+
+.find__button button{
+    width: 100%;
+    border-radius: 12px;
+    font-size: 1.7rem;
+    letter-spacing: -.42px;
+    font-weight: 700;
+}
+.find__list{
+    margin : 0 150px;
+    min-width: 640px;
+}
+
+.find__list__header {
+    position: relative;
+    padding: 20px;
+    border-bottom: 1px solid lightgray;
+}
+
+.find__node {
+    margin-top: 22px;
+    padding: 18px;
+    border-radius: 12px;
+    box-shadow: rgb(0 0 0 / 2%) 0px 2px 4px 0px;
+    border: 1px solid rgba(0, 0, 0, 0.07);
+}
+
+.find__node .find__node__body {
+    display: flex;
+    align-items: center;
+}
+
+.find__node .find__node__button {
+    display: flex;
+    margin-top: 12px;
+}
+.find__node .find__node__img {
+    position: relative;
+    margin-right: 20px;
+    margin-left: 10px;
+    width: 74px;
+    height: 74px;
+    border-radius: 11px;
+    overflow: hidden;
+    flex-shrink: 0;
+}
+
+.find__node .find__node__info .find__node__name {
+    font-size: 1.7rem;
+    line-height: 2.2rem;
+    letter-spacing: -.32px;
+    color: #242424;
+}
+
+.find__node .find__node__info .find__node__address {
+    margin-top: 3px;
+    font-size: 1.5rem;
+    line-height: 2.2rem;
+    letter-spacing: -.28px;
+    color: #424242;
+}
+.find__node .find__node__button .find__node__btn {
+    width: 100%;
+    height: 42px;
+    border-radius: 5px;
+    border: 1px solid #e1e1e1;
+    font-size: 1.5rem;
+    line-height: 2rem;
+    letter-spacing: -.28px;
+    color: #424242;
+}
+.find__node .find__node__button .find__node__btn+.find__node__btn {
+    margin-left: 5px;
+    border-color: #484848;
+}
+
+.find__list__header strong {
+    font-size: 1.9rem;
+    line-height: 2.6rem;
+    letter-spacing: -.48px;
+    color: #03c75a;
+    text-align: center;
+    word-break: keep-all;
+    word-wrap: break-word;
+}
+
+.find__node__body .find__node__info .find__node__tel {
+    margin-top: 5px;
+    font-size: 1rem;
+    line-height: 2.2rem;
+    color: #424242;
+    opacity: 0.6;
+}
+
+.MuiPagination-ul{
+    justify-content: center;
+}
+
+.find__list__pagination{
+    display: flex;
+    flex-direction: column;
+    margin: 0 150px;
+}
+
+.find__list__empty{
+    text-align: center;
+}
+
+.back__button{
+    margin-left: 200px;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    color: #000;
+}
+
+.back__button svg{
+    font-size: 25px;
+}
+
+.back__button:hover{
+    background-color: transparent;
+    border: none;
+    outline: none;
+    color: #000;
+}
+
+
+@media ( max-width: 996px ) {
+    .cntl__sel label {
+        font-size: 1rem;
+    }
+
+}

@@ -1,0 +1,159 @@
+.main__area {
+    width: 880px;
+    margin: 0px auto;
+    position: relative;
+    top: -20px;
+}
+
+.main__header {
+    margin-bottom: 16px
+}
+
+.main__title {
+    font-weight: bolder;
+    color: #222;
+    font-size: 24px;
+}
+
+.main__num {
+    padding-left: 6px;
+    font-size: 20px;
+    font-weight: bolder;
+    color: #03c75a;
+}
+
+.main__link {
+    font-size: 20px;
+    font-weight: 550;
+    color: black;
+    cursor: pointer;
+}
+
+.main__link:hover {
+    color: #444;
+}
+
+.main__link__title {
+    float: right;
+    font-size: 20px;
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+    transition: all 0.4s;
+}
+
+.main__link__title:hover {
+    font-size: 22px;
+}
+
+.main__link__title:hover {
+    color: #444;
+}
+
+.main__content__list {
+    float: left;
+    margin-left: 10px;
+    margin-bottom: 24px;
+}
+
+.main__content {
+    position: relative;
+    display: flex;
+    top: 20px;
+    border-radius: 8px;
+    width: 250px;
+    height: 80px;
+    border: 1px solid lightgray;
+    align-items: center;
+    text-decoration: none;
+    transition: all 0.4s;
+    font-size: 1.2rem;
+    cursor: pointer;
+}
+
+.main__content__wrap {
+    float: left;
+    width: 200px;
+    margin: 0 30px;
+}
+
+.main__content:hover {
+    background-color: rgba(0, 0, 0, 0.2);
+    font-size: 1.3rem;
+}
+
+.main__thumbnail {
+    position: relative;
+    flex: none;
+    width: 64px;
+    height: 60px;
+    left: 6px;
+    margin-right: 6px;
+    border-radius: 8px;
+}
+
+.main__content__name {
+    white-space: nowrap;
+    font-weight: 580;
+    margin-left: 5px;
+    color: #222;
+    transition: all 0.4s;
+}
+
+#main__content__nameText {
+    cursor: pointer;
+}
+
+.main__no__franchisee {
+    text-align: center;
+}
+
+.speech__bubble {
+    position: relative;
+    top: -36px;
+    width: 36%;
+    z-index: -1;
+}
+
+.more__info {
+    position: relative;
+    left: 620px;
+    bottom: 150px;
+    font-size: 11px;
+}
+
+@media (max-width: 996px) {
+    .main__area {
+        width: 580px;
+        margin-bottom: 30px;
+    }
+
+    .main__content__list {
+        margin-left: -80px;
+    }
+
+    .main__content__wrap {
+        margin: -0px;
+    }
+
+    .main__content {
+        left: 80px;
+        width: 180px;
+        padding-left: 4px;
+        margin-bottom: 10px;
+        font-size: 13px;
+    }
+
+    .main__content:hover {
+        font-size: 14px;
+    }
+
+    .main__content__name {
+        margin-left: 10px;
+
+    }
+
+    .more_deco {
+        display: none;
+    }
+}

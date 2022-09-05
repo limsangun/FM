@@ -1,0 +1,89 @@
+.introBackground__my__background {
+  background-image: url('../../public/img/my_background.png');
+  background-repeat: no-repeat;
+  height: 440px;
+  width: 100vw;
+  background-size : cover;
+}
+.introBackground__api__background {
+  background-image: url('../../public/img/api_background.png');
+  background-repeat: no-repeat;
+  height: 440px;
+  width: 100vw;
+  background-size : cover;
+}
+.introBackground__deco__background {
+  position: absolute;
+  left: 100px;
+  width: 100vw;
+  text-align: center;
+}
+.introBackground__my__image {
+  position: absolute;
+  left: 200px;
+  width: 100vw;
+  text-align: center;
+}
+.introBackground__api__image {
+  position: absolute;
+  top: 100px;
+  left: 200px;
+  width: 100vw;
+  text-align: center;
+}
+.introBackground__font__box {
+  position: relative;
+  top: 30%;
+  padding-right: 20%;
+  text-align: center;
+  color: #fff;
+}
+
+.introBackground__h3 {
+  margin-bottom: 0px;
+  font-weight: bolder;
+}
+
+.introBackground__h5 {
+  margin-bottom: 12px;
+}
+
+.introBackground__button {
+  margin: 30px auto;
+  padding: 0px 36px;
+  width: 180px;
+  height: 52px;
+  font-family: 'NotoSansRegular';
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 50px;
+  color: #fff;
+  text-align: center;
+  border-radius: 50px;
+  border: 0px;
+  background-color: rgba(66,135,245,0.5);
+  transition: all 0.4s;
+}
+.introBackground__button:hover {
+  background-color: rgba(0, 0, 0, 0.2);
+  width: 190px;
+  height: 54px;
+  font-size: 17px;
+}
+.introBackground__link {
+  text-decoration: none;
+}
+.introBackground__font {
+  color: #fff;
+  font-weight: bold;
+}
+
+.carousel-control-prev{
+  position: absolute;
+  left: 16%;
+}
+.carousel-control-next{
+  position: absolute;
+  right: 16%;
+} 
+

@@ -1,0 +1,172 @@
+.KDC_Breadcrumb__root__31lqj {
+    height: 56px;
+}
+
+.screen_out {
+    height: 0;
+    position: absolute;
+    width: 0;
+    line-height: 0;
+    overflow: hidden;
+    text-indent: -9999px;
+}
+
+.txt_arr {
+    display: none;
+}
+.KDC_Body__root__1Q-tq {
+    box-sizing: border-box;
+    min-height: 100%;
+    position: relative;
+}
+.KDC_Content__centerRoot__3K9s0 {
+    margin: 32px auto 50px;
+    width: 964px;
+}
+.KDC_AppInfoList__root__2O8BC {
+    margin: 0 30px;
+    padding-top: 8px;
+}
+
+.icon_plus {
+    background-color: #2d50ff;
+    float: left;
+    height: 64px;
+    margin-left: 16px;
+    position: relative;
+    transition: background-color 0.25s;
+    width: 64px;
+}
+
+.icon_plus:after,
+.icon_plus:before {
+    background-color: #fff;
+    content: "";
+    left: 50%;
+    position: absolute;
+    top: 50%;
+}
+
+.icon_plus:before {
+    height: 24px;
+    margin: -12px 0 0 -1px;
+    width: 2px;
+}
+
+.icon_plus:after {
+    height: 2px;
+    margin: -1px 0 0 -12px;
+    width: 24px;
+}
+
+.KDC_AppInfoList__container__2vCao {
+    margin-top: 20px;
+}
+
+.KDC_AddButton__root__3wM46 {
+    background-color: #03166c;
+    display: block;
+    height: 96px;
+    overflow: hidden;
+    transition: background-color 0.25s;
+    width: 100%;
+}
+
+.KDC_AppInfo__root__DWY2K {
+    background-color: #fff;
+    box-sizing: border-box;
+    min-height: 96px;
+    padding: 16px 16px 15px 16px;
+    position: relative;
+}
+
+.KDC_AppInfo__root__DWY2K .box_typeinfo{
+    color: #111;
+    display: block;
+    font-family: NotoSans Medium, Malgun Gothic, 맑은 고딕, Apple SD Gothic Neo,
+        돋움, dotum, sans-serif;
+    font-size: 20px;
+    font-weight: 400;
+    letter-spacing: -0.5px;
+    line-height: 30px;
+    margin-top: 0;
+
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.area_appinfo {
+    margin-bottom: 10px;
+}
+
+.box_thumb {
+    float: left;
+}
+
+.box_typeinfo {
+    margin-left: 80px;
+}
+
+.KDC_Badge__root__25Csl {
+    border: 1px solid #ddd;
+    box-sizing: border-box;
+    display: inline-block;
+    font-size: 11px;
+    height: 20px;
+    line-height: 20px;
+    margin-right: 1px;
+    min-width: 59px;
+    padding: 0 8px;
+    text-align: center;
+}
+
+.txt_appadd {
+    color: #fff;
+    float: left;
+    font-family: NotoSans Medium, Malgun Gothic, 맑은 고딕, Apple SD Gothic Neo,
+        돋움, dotum, sans-serif;
+    font-size: 20px;
+    letter-spacing: -0.2px;
+    line-height: 64px;
+    margin-left: 16px;
+}
+
+.tit_layer {
+    font-weight: normal;
+}
+.modal_input {
+    position: relative;
+    right: 4px;
+    margin-top: 8px;
+    padding-left: 4px;
+    height: 34px;
+    width: 400px;
+    border: 1px solid gray;
+    border-radius: 10px;
+}
+.modal-header-font {
+    font-size: 24px;
+}
+
+.modal-content {
+    border-radius: 0px;
+    padding-left: 40px;
+    padding-right: 40px;
+}
+
+
+.KDC_AppInfoList__apps__1GCA_ {
+    margin: 0;
+    outline: none;
+    padding: 0;
+}
+
+.a_tag, .a_tag:active, .a_tag:hover {
+    text-decoration: none;
+    color: #111;
+}
+
+.list_style {
+    list-style: none;
+}
